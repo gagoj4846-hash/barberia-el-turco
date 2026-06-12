@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('../img/barber.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: gold;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.hero-buttons a {
+  margin: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* BOTONES */
+.btn {
+  background: gold;
+  color: black;
+}
+
+.btn-outline {
+  border: 1px solid gold;
+  color: gold;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #1a1a1a;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* CARDS */
+.card {
+  background: #2a2a2a;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.card span {
+  color: gold;
+  font-weight: bold;
+}
+
+/* Fondo oscuro del modal */
+.modal {
+    display: none;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cuando se muestre el modal */
+.modal.active {
+    display: flex;
+}
+
+/* Caja principal */
+.modal-box {
+    width: 90%;
+    max-width: 550px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: aparecer 0.25s ease;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos */
+.modal-box h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #222;
+}
+
+/* Párrafos */
+.modal-box p {
+    text-align: center;
+    color: #666;
+}
+
+/* Inputs */
+.modal-box input,
+.modal-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Botones */
+.modal-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #c59d3d;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-box button:hover {
+    background: #a98328;
+}
+
+/* Ocultar pasos no activos */
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.services-grid{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.service-card{
+    width:160px;
+    border:2px solid #ccc;
+    border-radius:10px;
+    padding:15px;
+    cursor:pointer;
+    transition:0.2s;
+    text-align:center;
+}
+
+.service-card:hover{
+    transform:scale(1.03);
+}
+
+.service-card.selected{
+    border-color:#c59d3d;
+    background:#fff8e6;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
